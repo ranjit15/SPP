@@ -1,0 +1,15 @@
+package com.pearson.tests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class RandomTest {
+	public static void main(String[] args) throws InterruptedException{
+	WebDriver driver = new FirefoxDriver();
+	driver.get("http://register.rediff.com/register/register.php?FormName=user_details");
+	driver.findElement(By.xpath("//*[@id='wrapper']/table[2]/tbody/tr[19]/td[3]/select[1]")).sendKeys("10");
+	driver.findElement(By.xpath("//*[@id='wrapper']/table[2]/tbody/tr[19]/td[3]/select[2]")).sendKeys("JAN");
+	Thread.sleep(20000);
+	}
+}

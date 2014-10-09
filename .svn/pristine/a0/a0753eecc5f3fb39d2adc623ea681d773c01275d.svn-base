@@ -1,0 +1,129 @@
+/**
+ * 
+ */
+package com.pearson.tests;
+
+import java.util.Arrays;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.pearson.smartmediaplayer.GenericVideoPage;
+
+/**
+ * @author Alex Su
+ * @date Jun 21, 2013
+ */
+
+public class SimplifiedConceptCheckIT extends MediaPlayerTest {
+
+    // MP-800, the tester would scrub to concept check point and check video plays after all three possible answer submissions
+//    @Test(groups = {"SimplifiedConceptCheckIT", "scienceConceptCheck", "regression", "acceptance"})
+//    public void scienceConceptCheck() {
+//        conceptCheck("/assets/SCIENCE_CONCEPT_CHECK", false);
+//    }
+
+    // MP-437, simplified math concept check
+    @Test(groups = {"SimplifiedConceptCheckIT", "mathConceptCheck", "regression", "acceptance"})
+    public void mathConceptCheck() {
+        conceptCheck("/assets/MATH_CONCEPT_CHECK", true);
+    }
+
+    // Only set the second parameter to true when you expect different answer would lead to different time line on the progress bar
+    public void conceptCheck(String videoName, boolean diffScrub) {
+        String[] slider = new String[4];
+        int numberOfTries = 20;
+
+        logInstruction("Going to " + httpPrefix + videoName);
+        uiDriver.get(httpPrefix + videoName);
+        GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+        myRobot.calibrateAndEnterFrame(myRobot);
+        logInstruction("Waiting for the play button, and play the video");
+        uiDriver.sleep(25000);
+        genericVideoPage.playButton.click();
+        uiDriver.sleep(5000);
+
+        while (!genericVideoPage.verifyVideoIsPlaying() && numberOfTries > 0) {
+            logInstruction("Waiting for the video to load properly ... remaining tries: " + numberOfTries);
+            if (genericVideoPage.playButton.isDisplayed())
+                genericVideoPage.playButton.click();
+            numberOfTries--;
+            if (numberOfTries <= 0)
+                Assert.assertTrue(false, "User ran out of patience");
+            uiDriver.sleep(5000);
+        }
+        logInstruction("Making sure the video is playing");
+        uiDriver.waitToBeDisplayed(genericVideoPage.pauseButton, 10000);
+
+        // iteration for 3 possible answers
+        for (int i = 1; i <= 3; i++) {
+            logInstruction("Scrub to concept check point");
+            conceptScrub(genericVideoPage);
+            uiDriver.sleep(1000);
+            if (diffScrub)
+                slider[0] = genericVideoPage.leftPlayCounter.getText();
+            logInstruction("Click on answer option " + i);
+            switch (i) {
+                case 1:
+                    genericVideoPage.conceptCheckRadioButton1.click();
+                    break;
+                case 2:
+                    genericVideoPage.conceptCheckRadioButton2.click();
+                    break;
+                case 3:
+                    genericVideoPage.conceptCheckRadioButton3.click();
+                    break;
+            }
+            logInstruction("Submit answer");
+            genericVideoPage.conceptCheckSubmit.click();
+
+            if (diffScrub) {
+                while (slider[0].equals(genericVideoPage.leftPlayCounter.getText())) {}
+                slider[i] = genericVideoPage.leftPlayCounter.getText();
+            }
+
+            logInstruction("Making sure the video is playing after answer submission");
+            uiDriver.sleep(1000);
+            uiDriver.waitToBeDisplayed(genericVideoPage.pauseButton, 10000);
+        }
+
+        if (diffScrub) {
+            System.out.println(Arrays.toString(slider));
+            logInstruction("Ensuring concept check did not scrub to the same place for all 3 answers");
+
+            if (slider[1].equals(slider[2]))
+                Assert.assertTrue(
+                        false,
+                        "Warning! Answer 1 scrub to " + slider[1] + " and answer 2 scrub to " + slider[2]);
+            if (slider[1].equals(slider[3]))
+                Assert.assertTrue(
+                        false,
+                        "Warning! Answer 1 scrub to " + slider[1] + " and answer 3 scrub to " + slider[3]);
+            if (slider[2].equals(slider[3]))
+                Assert.assertTrue(
+                        false,
+                        "Warning! Answer 2 scrub to " + slider[2] + " and answer 3 scrub to " + slider[3]);
+        }
+        logInstruction("Success! Tester is now exiting");
+    }
+
+    /**
+     * Scrubs to a few pixels before concept check indicator so we can test it quickly
+     * 
+     * @param genericVideoPage
+     */
+    private void conceptScrub(GenericVideoPage genericVideoPage) {
+        // re-calibrate before any scrubbing
+        uiDriver.switchTo().defaultContent();
+        myRobot.calibrateAndEnterFrame(myRobot);
+        myRobot.mouseMove(
+                genericVideoPage.conceptCheckIndicator.getWebElement().getLocation().x - 20,
+                genericVideoPage.conceptCheckIndicator.getWebElement().getLocation().y + 5);
+        myRobot.mouseClick();
+
+        // wait for play button (so the video is paused)
+        uiDriver.sleep(10000);
+        uiDriver.waitToBeDisplayed(genericVideoPage.playButton, 10000);
+    }
+
+}

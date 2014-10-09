@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[&bull; Click toolbar play button<br/>]]>
+    </line>
+    <line>
+      <![CDATA[&bull; Click CC button<br/>]]>
+    </line>
+    <line>
+      <![CDATA[&bull; Select the English language<br/>]]>
+    </line>
+    <line>
+      <![CDATA[&bull; Wait for caption text to appear: In our next example we are going to look at sketching a graph by plotting points.<br/>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="102807" started-at="2014-05-23T18:49:28Z" finished-at="2014-05-23T18:51:11Z">
+    <groups>
+      <group name="CaptionText">
+        <method signature="TwoCaption.CaptionText()[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="CaptionText" class="com.pearson.tests.TwoCaption"/>
+      </group> <!-- CaptionText -->
+      <group name="regression">
+        <method signature="TwoCaption.CaptionText()[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="CaptionText" class="com.pearson.tests.TwoCaption"/>
+      </group> <!-- regression -->
+    </groups>
+    <test name="Default test" duration-ms="102807" started-at="2014-05-23T18:49:28Z" finished-at="2014-05-23T18:51:11Z">
+      <class name="com.pearson.tests.TwoCaption">
+        <test-method status="PASS" signature="cleanupDrivers()[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="cleanupDrivers" is-config="true" duration-ms="929" started-at="2014-05-24T00:19:27Z" finished-at="2014-05-24T00:19:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupDrivers -->
+        <test-method status="PASS" signature="logTest(org.testng.ITestContext)[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="logTest" is-config="true" duration-ms="1" started-at="2014-05-24T00:19:28Z" finished-at="2014-05-24T00:19:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@e7db0da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTest -->
+        <test-method status="PASS" signature="setupClassTest(java.lang.String)[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="setupClassTest" is-config="true" duration-ms="35561" started-at="2014-05-24T00:19:28Z" finished-at="2014-05-24T00:20:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[none_specified]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupClassTest -->
+        <test-method status="PASS" signature="logMethod(java.lang.reflect.Method)[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="logMethod" is-config="true" duration-ms="1" started-at="2014-05-24T00:20:03Z" finished-at="2014-05-24T00:20:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.pearson.tests.TwoCaption.CaptionText() throws java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logMethod -->
+        <test-method status="PASS" signature="CaptionText()[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="CaptionText" duration-ms="66768" started-at="2014-05-24T00:20:03Z" finished-at="2014-05-24T00:21:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[&bull; Click toolbar play button<br/>]]>
+            </line>
+            <line>
+              <![CDATA[&bull; Click CC button<br/>]]>
+            </line>
+            <line>
+              <![CDATA[&bull; Select the English language<br/>]]>
+            </line>
+            <line>
+              <![CDATA[&bull; Wait for caption text to appear: In our next example we are going to look at sketching a graph by plotting points.<br/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CaptionText -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="afterMethod" is-config="true" duration-ms="0" started-at="2014-05-24T00:21:10Z" finished-at="2014-05-24T00:21:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.pearson.tests.TwoCaption.CaptionText() throws java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClassTest()[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="afterClassTest" is-config="true" duration-ms="463" started-at="2014-05-24T00:21:10Z" finished-at="2014-05-24T00:21:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClassTest -->
+        <test-method status="PASS" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="afterTest" is-config="true" duration-ms="1" started-at="2014-05-24T00:21:11Z" finished-at="2014-05-24T00:21:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@e7db0da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="cleanupDrivers()[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="cleanupDrivers" is-config="true" duration-ms="883" started-at="2014-05-24T00:21:11Z" finished-at="2014-05-24T00:21:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupDrivers -->
+        <test-method status="PASS" signature="afterSuite(int)[pri:0, instance:com.pearson.tests.TwoCaption@7a2e4418]" name="afterSuite" is-config="true" duration-ms="515" started-at="2014-05-24T00:21:11Z" depends-on-methods="com.pearson.tests.MediaPlayerTest.cleanupDrivers" finished-at="2014-05-24T00:21:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.pearson.tests.TwoCaption -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BrowserPOC_Tests]">
+  <test name="Single Caption(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.pearson.tests.SingleCaption">
+        <methods>
+          <include name="afterTest"/>
+          <include name="ScreenMode"/>
+          <include name="DragVideoScrubber"/>
+          <include name="setupClassTest"/>
+          <include name="ReplayButton"/>
+          <include name="logMethod"/>
+          <include name="afterMethod"/>
+          <include name="cleanupDrivers"/>
+          <include name="CaptionValidation"/>
+          <include name="logTest"/>
+          <include name="afterSuite"/>
+          <include name="PlayPause"/>
+          <include name="afterClassTest"/>
+        </methods>
+      </class> <!-- com.pearson.tests.SingleCaption -->
+    </classes>
+  </test> <!-- Single Caption(failed) -->
+</suite> <!-- Failed suite [BrowserPOC_Tests] -->

@@ -1,0 +1,158 @@
+/**
+*
+ */
+package com.pearson.tests;
+ 
+import java.awt.AWTException;
+import java.awt.Color;
+ 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.Point;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+ 
+
+
+import com.pearson.smartmediaplayer.GenericVideoPage;
+ 
+/**
+* @author Ranjit
+* @date 29 Jan, 2013
+* Verify the functionality of common elements across video's and audio
+*/
+public class ElementsVerification extends MediaPlayerTest {
+    /**
+     * Title verification for all the video's
+     * @throws AWTException 
+     *
+     **/
+    @Test(groups = {"TitleCheck","regression"})
+    public void VideoTitleCheck() throws AWTException {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         uiDriver.get("http://mediaplayer.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl");
+         //uiDriver.get("http://mediaplayer.pearsoncmg.com/static/client/player_client/player_iframe.html");
+         uiDriver.sleep(20000);
+         myRobot.calibrateAndEnterFrame(myRobot);
+         Robot robot = new Robot();
+         robot.keyPress(KeyEvent.VK_SPACE);
+         robot.keyRelease(KeyEvent.VK_SPACE);
+         //robot.mouseMove(431, 130);
+         //myRobot.calibrateAndEnterFrame(myRobot);
+         //genericVideoPage.playButton.click();
+         uiDriver.sleep(15000);
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC","QA Test - Sample Player Chapters");
+         //TitleVerification("http://mediaplayer.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl","QA Test - Two Captions");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/j8ezH8hmSeJpnfi_KYqowb5NZ15WItsc","QA Test - One Set of Captions");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK","MATH_CONCEPT_CHECK");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK_INTERNAL","MATH_CONCEPT_CHECK_INTERNAL");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/SCIENCE_CONCEPT_CHECK","SCIENCE_CONCEPT_CHECK");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/static/client/player_client/player_iframe.html","QA Test - One Set of Captions");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/MP3_CAPTIONS","Sample MP3 Audio (from Sajan)");
+         //genericVideoPage.TitleVerification("http://mediaplayer.pearsoncmg.com/assets/AUDIO_DESCRIPTION_EXAMPLE","Example for Audio Description");
+    }
+    /**
+     * Play/Pause functionality and Tool tip validation for all the video's
+     *
+     **/
+    //@Test(groups = {"PlayPause","regression"})
+    public void PlayPauseButton() {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/j8ezH8hmSeJpnfi_KYqowb5NZ15WItsc","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK_INTERNAL","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/SCIENCE_CONCEPT_CHECK","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/static/client/player_client/player_iframe.html","Pause Video","Play Video");
+         //genericVideoPage.PlayPause("http://mediaplayer.pearsoncmg.com/assets/AUDIO_DESCRIPTION_EXAMPLE","Pause Video","Play Video");
+    }
+    /**
+     * Play/Pause functionality and Tool tip validation for Audio Player
+     *
+     **/
+    //@Test(groups = {"PlayPauseAudio","regression"})
+    public void AudioPlayPause() {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         genericVideoPage.PlayPauseAudio("http://mediaplayer.pearsoncmg.com/assets/MP3_CAPTIONS","Pause Audio","Play Audio");
+    }
+    /**
+     * Volume button on/off state functionality and verify tool tip in both the states for all video's
+     *
+     **/
+    //@Test(groups = {"VolumeToggle","regression"})
+    public void VolumeToggle() {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC","Volume On","Volume Off");
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl","Volume On","Volume Off");
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/j8ezH8hmSeJpnfi_KYqowb5NZ15WItsc","Volume On","Volume Off");
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK","Volume On","Volume Off");
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK_INTERNAL","Volume On","Volume Off");
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/SCIENCE_CONCEPT_CHECK","Volume On","Volume Off");
+         //genericVideoPage.VolumeControl("http://mediaplayer-cert.pearsoncmg.com/static/client/player_client/player_iframe.html","Volume On","Volume Off");
+         genericVideoPage.VolumeControl("http://mediaplayer.pearsoncmg.com/assets/AUDIO_DESCRIPTION_EXAMPLE","Volume On","Volume Off");
+    }
+    /**
+     * Volume button on/off state functionality and verify tool tip in both the states for all Audio's
+     *
+     **/
+    //@Test(groups = {"PlayPauseAudio","regression"})
+    public void AudioVolumeToggle() {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         genericVideoPage.AudioVolumeControl("http://mediaplayer.pearsoncmg.com/assets/MP3_CAPTIONS","Volume On","Volume Off");
+    }
+    /**
+     * Verify the Full/Normal screen button functionality and verify tool tip
+     *
+     **/
+   // @Test(groups = {"ScreenMode","regression"})
+    public void VerifyScreenMode() {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         genericVideoPage.ScreenMode("http://mediaplayer-cert.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer.pearsoncmg.com/assets/j8ezH8hmSeJpnfi_KYqowb5NZ15WItsc","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK_INTERNAL","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer.pearsoncmg.com/assets/SCIENCE_CONCEPT_CHECK","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer-cert.pearsoncmg.com/static/client/player_client/player_iframe.html","Exit Full Screen","Enter Full Screen");
+         //genericVideoPage.ScreenMode("http://mediaplayer.pearsoncmg.com/assets/AUDIO_DESCRIPTION_EXAMPLE","Exit Full Screen","Enter Full Screen");
+    }
+    //@Test(groups = {"HoverPlayButton","regression"})
+    public void HoverPlayButton() {
+         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+         genericVideoPage.HoverPlay("http://mediaplayer.pearsoncmg.com/assets/MATH_CONCEPT_CHECK");
+    }
+    //@Test(groups = {"PrePlayStateTwoCaptionVideo","regression"})
+    public void PauseVerification() throws AWTException {
+        GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);
+        genericVideoPage
+                .checkingElementsInVideoUrl(
+                        "http://player.media.dev.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC",
+                        "ChapteringMenu",
+                        "QA Test - Sample Player Chapters");
+        genericVideoPage.playPauseButton.waitToBePresent(4000);
+        genericVideoPage.playPauseButton.click();
+        uiDriver.sleep(40000);// 00:36 seconds
+        String currentTimeCode = genericVideoPage.leftPlayCounter.getWebElement().getText();
+        System.out.println("sleep time " + currentTimeCode);
+        System.out.println(genericVideoPage.playPauseButton.getAttribute("title"));
+        System.out.println(genericVideoPage.playPauseButton.getAttribute("value"));
+        System.out.println(genericVideoPage.playPauseButton.getAttribute("class"));
+        Assert.assertTrue(
+                "Pause Video".equals(genericVideoPage.playPauseButton.getAttribute("title")),
+                "expected  \"Pause Video\" found \"" + genericVideoPage.playPauseButton
+                        .getAttribute("title") + "\"");
+ 
+        Assert.assertTrue(genericVideoPage.pauseButton.isDisplayed());
+        logger.info("pause displayed");
+        genericVideoPage.playPauseButton.click();
+ 
+        Point pointToVerify = genericVideoPage.playPauseButton.getWebElement().getLocation();
+        System.out.println(pointToVerify);
+ 
+    }
+ 
+    Color expectedColorOfPixel = new Color(174, 166, 151);// some shade of white
+ 
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE Suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BrowserPOC_Tests">
+<!-- only exclude does anything for the groups -->
+    <!-- Reference -->
+    <!-- <test name="Demo Test"> 
+    <parameter name="url" value="src/test/resources/testData/login.html"></parameter> 
+        <groups> <run> <exclude name="errorDetector"></exclude> </run> </groups> 
+        <classes> <class name="com.pearson.demotests.DemoTestIT" /> </classes> 
+        </test> -->
+    <!-- Testng was created by someone with the coding abilities of a 12 year old. Follow this format or have fun slowly going insane. 
+    One test for every class-->
+    
+     
+    
+    <test name="Play State Test">
+        <groups>
+            <run>
+	            <include name="captionsTest"></include>
+	            <include name="hoverReplayButton"></include>
+            	<include name="toolbarReplayButton"></include>
+                <include name="scrubbing"></include>
+                <include name="videoContinuesInFullScreen"></include>
+                <include name="volume"></include>
+                <include name="regression"></include>               
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PlayState" />    
+        </classes>
+    </test>
+     <test name="Chaptering Test ">
+        <groups>
+            <run>
+	            <include name="chapteringTitletipAppearsOnHover"></include>
+	            <include name="chaptering"></include>
+            	<include name="regression"></include>
+                <include name="chapteringMenu"></include>
+                <include name="chapteringTooltipAppearsOnHover"></include>
+                <include name="toolbarChaptering"></include>      
+                <include name="acceptance"></include>  
+                <include name="tenChaptersAppearInMenu"></include>  
+                <include name="FirstChapterDot"></include>  
+                <include name="ChapterTitleVerification"></include>  
+                <include name="DotVerification"></include>  
+                <include name="TitleVerification"></include>  
+                <include name="chapterPlayVerification"></include>  
+                        <include name="regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PlayState" />    
+        </classes>
+    </test>
+    
+    <test name="PausedState Test">
+        <groups>
+            <run>
+            <include name = "regression" ></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Chaptering" />   
+        </classes>
+    </test>
+    <test name="PrePlayState Test">
+        <groups>
+            <run>
+            <include name="regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PausedState" />  
+        </classes>
+    </test> -->
+    <!-- <test name="PrePlay State Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PrePlayState" /> 
+        </classes>
+    </test>
+    <test name="Themes Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Themes" />   
+        </classes>
+    </test>
+    <test name="Accessibility">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility" />    
+        </classes>
+    </test> -->
+      
+    
+</suite>

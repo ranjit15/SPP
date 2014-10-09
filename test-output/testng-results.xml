@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="67844" started-at="2014-10-01T12:25:04Z" finished-at="2014-10-01T12:26:12Z">
+    <groups>
+      <group name="regression">
+        <method signature="ChapterTest.VolumeController()[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="VolumeController" class="com.pearson.tests.ChapterTest"/>
+      </group> <!-- regression -->
+      <group name="VolumeController">
+        <method signature="ChapterTest.VolumeController()[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="VolumeController" class="com.pearson.tests.ChapterTest"/>
+      </group> <!-- VolumeController -->
+    </groups>
+    <test name="Default test" duration-ms="67844" started-at="2014-10-01T12:25:04Z" finished-at="2014-10-01T12:26:12Z">
+      <class name="com.pearson.tests.ChapterTest">
+        <test-method status="PASS" signature="cleanupDrivers()[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="cleanupDrivers" is-config="true" duration-ms="985" started-at="2014-10-01T17:55:03Z" finished-at="2014-10-01T17:55:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupDrivers -->
+        <test-method status="PASS" signature="logTest(org.testng.ITestContext)[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="logTest" is-config="true" duration-ms="1" started-at="2014-10-01T17:55:04Z" finished-at="2014-10-01T17:55:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f109723]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTest -->
+        <test-method status="PASS" signature="setupClassTest(java.lang.String)[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="setupClassTest" is-config="true" duration-ms="29654" started-at="2014-10-01T17:55:04Z" finished-at="2014-10-01T17:55:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[none_specified]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupClassTest -->
+        <test-method status="PASS" signature="logMethod(java.lang.reflect.Method)[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="logMethod" is-config="true" duration-ms="1" started-at="2014-10-01T17:55:34Z" finished-at="2014-10-01T17:55:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.pearson.tests.ChapterTest.VolumeController() throws java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logMethod -->
+        <test-method status="PASS" signature="VolumeController()[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="VolumeController" duration-ms="36522" started-at="2014-10-01T17:55:34Z" finished-at="2014-10-01T17:56:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VolumeController -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="afterMethod" is-config="true" duration-ms="1" started-at="2014-10-01T17:56:10Z" finished-at="2014-10-01T17:56:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.pearson.tests.ChapterTest.VolumeController() throws java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClassTest()[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="afterClassTest" is-config="true" duration-ms="1646" started-at="2014-10-01T17:56:10Z" finished-at="2014-10-01T17:56:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClassTest -->
+        <test-method status="PASS" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="afterTest" is-config="true" duration-ms="1" started-at="2014-10-01T17:56:12Z" finished-at="2014-10-01T17:56:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f109723]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="cleanupDrivers()[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="cleanupDrivers" is-config="true" duration-ms="1041" started-at="2014-10-01T17:56:12Z" finished-at="2014-10-01T17:56:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupDrivers -->
+        <test-method status="PASS" signature="afterSuite(int)[pri:0, instance:com.pearson.tests.ChapterTest@2dd9928]" name="afterSuite" is-config="true" duration-ms="514" started-at="2014-10-01T17:56:13Z" depends-on-methods="com.pearson.tests.MediaPlayerTest.cleanupDrivers" finished-at="2014-10-01T17:56:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.pearson.tests.ChapterTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

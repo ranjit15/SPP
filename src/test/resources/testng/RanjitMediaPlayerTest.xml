@@ -1,0 +1,92 @@
+<!DOCTYPE Suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BrowserPOC_Tests">
+<!-- only exclude does anything for the groups -->
+    <!-- Reference -->
+    <!-- <test name="Demo Test"> <parameter name="url" value="src/test/resources/testData/login.html"></parameter> 
+        <groups> <run> <exclude name="errorDetector"></exclude> </run> </groups> 
+        <classes> <class name="com.pearson.demotests.DemoTestIT" /> </classes> </test> -->
+    <!-- Testng was created by someone with the coding abilities of a 12 year old. Follow this format or have fun slowly going insane. 
+    One test for every class-->
+    
+    <test name="ChapterTest">
+        <groups>
+            <run>
+	            <include name="TitleVerification"></include>
+	            <include name="PlayPause"></include>
+            	<exclude name="DragVideoScrubber"></exclude>              
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.ChapterTest" />    
+        </classes>
+    </test>
+    <!-- <test name="Accessibiliy Test">
+        <groups>
+            <run>
+                If you add include and excludes, then tests will run this group after running the class, and they will not close the browser. 
+                This leads to hanging tests on jenkins.
+                If you leave this section blank then the tests run twice...
+                It is probably more effective to run by name
+                <exclude name="chapteringTooltipAppearsOnHover"></exclude>
+                <exclude name="regression"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility" />    
+        </classes>
+    </test>
+    <test name="Additional Parameters Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.AdditionalParameters" /> 
+        </classes>
+    </test>
+    <test name="Chaptering Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Chaptering" />   
+        </classes>
+    </test>
+    <test name="Paused State Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PausedState" />  
+        </classes>
+    </test> -->
+    <!-- <test name="PrePlay State Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PrePlayState" /> 
+        </classes>
+    </test>
+    <test name="Themes Test">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Themes" />   
+        </classes>
+    </test>
+    <test name="Accessibility">
+        <groups>
+            <run>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility" />    
+        </classes>
+    </test>  -->
+</suite>

@@ -1,0 +1,61 @@
+<!DOCTYPE Suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BrowserPOC_Tests">
+<!-- only exclude does anything for the groups -->
+    <!-- Reference -->
+    <!-- <test name="Demo Test"> <parameter name="url" value="src/test/resources/testData/login.html"></parameter> 
+        <groups> <run> <exclude name="errorDetector"></exclude> </run> </groups> 
+        <classes> <class name="com.pearson.demotests.DemoTestIT" /> </classes> </test> -->
+    <!-- Testng was created by someone with the coding abilities of a 12 year old. 
+    Follow this format or have fun slowly going insane. 
+    One test for every class-->
+    <test name="PrePlayState">
+    	<groups>
+            <run>
+	            <include name="PrePlayStateTwoCaptionVideo"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PrePlayState" />    
+        </classes>
+    </test>
+    <test name="Chaptering Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Chaptering" />    
+        </classes>
+    </test>
+    <test name="ElementsVerification">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.ElementsVerification" />    
+        </classes>
+    </test>
+    <test name="LongVideoIT">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.LongVideoIT" />    
+        </classes>
+    </test>
+    <test name="PausedState">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PausedState" />    
+        </classes>
+    </test>
+</suite>

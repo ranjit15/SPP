@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!--The chrome browser's back button is on the left side.-->
+<html lang="en" onclick="document.getElementById('counter').value++">
+<head>
+    <meta charset="utf-8" />
+    <title>Calibration Test</title>
+</head>
+<body>
+    <img height="1" width="1" style="position: absolute; left: 200px; top: 0;"
+        onclick="document.getElementById('done').value = 'yep'" />
+    <input type="text" id="counter" value="0" />
+    <input type="text" id="done" value="nope" />
+</body>
+</html>

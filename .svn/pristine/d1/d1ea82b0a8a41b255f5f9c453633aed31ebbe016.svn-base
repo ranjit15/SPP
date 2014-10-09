@@ -1,0 +1,22 @@
+#This is comment
+driverurl = localhost
+browser = firefox
+#browser = chrome
+#browser = IE
+env= dev
+startpageurl = http://player.media.ppe.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl
+verifytimeout = 30000
+waittimeout = 30000
+pageloadtimeout = 20000
+verifyinterval = 20000
+
+#flash = enabled
+flash = disabled
+#TestLink Settings
+testlinkurl = http://testlink.pearsoncmg.com/lib/api/xmlrpc.php
+testlinkdevkey = 8fd98ef3ddf3334e48940437c3233c95
+testlinkbuild = TestBuild_1
+
+#Video URL'S
+Chaptering = http://mediaplayer.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC
+Two_Caption = http://mediaplayer-test.pearsoncmg.com/assets/tH6IgtX_wW1isZkRq5sYgKcVTIqMJOXl

@@ -1,0 +1,345 @@
+<html>
+<head>
+<title>TestNG:  Single Caption</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Single Caption</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 18 17:18:57 IST 2014</td>
+</tr>
+<tr><td>Total time:</td><td>515 seconds (515803 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>regression </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.CaptionValidation()'><b>CaptionValidation</b><br>Test class: com.pearson.tests.SingleCaption<br/>
+<a href="#Output-279448910" onClick='toggleBox("Output-279448910", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-279448910" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-279448910">
+<a class='eSeScreenshot' href="../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.20.49.175_CaptionValidation2_desktop.png" target="_blank"><img width='200' src='../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.20.49.175_CaptionValidation2_desktop.png' /></a><br/>
+</div>
+</td>
+<td><div><pre>com.pearson.test.eselenium.framework.exceptions.TimeOutException: Verification exception for element: Timed out: After 20044ms, failed to display element [Locator = {By.id: captionBtn}]
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.waitToBeDisplayed(DefaultUIElement.java:991)
+	at com.pearson.test.eselenium.framework.drivers.DefaultUIDriver.waitToBeDisplayed(DefaultUIDriver.java:677)
+	at com.pearson.tests.SingleCaption.CaptionValidation(SingleCaption.java:193)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace279448910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace279448910'><pre>com.pearson.test.eselenium.framework.exceptions.TimeOutException: Verification exception for element: Timed out: After 20044ms, failed to display element [Locator = {By.id: captionBtn}]
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.waitToBeDisplayed(DefaultUIElement.java:991)
+	at com.pearson.test.eselenium.framework.drivers.DefaultUIDriver.waitToBeDisplayed(DefaultUIDriver.java:677)
+	at com.pearson.tests.SingleCaption.CaptionValidation(SingleCaption.java:193)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>46</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.DragVideoScrubber()'><b>DragVideoScrubber</b><br>Test class: com.pearson.tests.SingleCaption<br/>
+<a href="#Output-327672562" onClick='toggleBox("Output-327672562", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-327672562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-327672562">
+<a class='eSeScreenshot' href="../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.21.57.083_DragVideoScrubber2_desktop.png" target="_blank"><img width='200' src='../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.21.57.083_DragVideoScrubber2_desktop.png' /></a><br/>
+</div>
+</td>
+<td><div><pre>com.pearson.test.eselenium.framework.exceptions.TimeOutException: Verification exception for element: Timed out: Failed to click on element [Locator = {By.selector: button[id=&apos;playBtn&apos;][value=&apos;Play Video&apos;]}] because this element is not displayed. If desired behavior is to click on element which is not displayed, and continue without exception please use clickNoWait() method ! Previous Exception: Verification exception for element: Timed out: After 40130ms, failed to display element [Locator = {By.selector: button[id=&apos;playBtn&apos;][value=&apos;Play Video&apos;]}]
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.click(DefaultUIElement.java:225)
+	at com.pearson.tests.SingleCaption.DragVideoScrubber(SingleCaption.java:86)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace327672562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace327672562'><pre>com.pearson.test.eselenium.framework.exceptions.TimeOutException: Verification exception for element: Timed out: Failed to click on element [Locator = {By.selector: button[id=&apos;playBtn&apos;][value=&apos;Play Video&apos;]}] because this element is not displayed. If desired behavior is to click on element which is not displayed, and continue without exception please use clickNoWait() method ! Previous Exception: Verification exception for element: Timed out: After 40130ms, failed to display element [Locator = {By.selector: button[id=&apos;playBtn&apos;][value=&apos;Play Video&apos;]}]
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.click(DefaultUIElement.java:225)
+	at com.pearson.tests.SingleCaption.DragVideoScrubber(SingleCaption.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>67</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.PlayPause()'><b>PlayPause</b><br>Test class: com.pearson.tests.SingleCaption<br/>
+<a href="#Output-1962408005" onClick='toggleBox("Output-1962408005", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1962408005" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1962408005">
+&bull; Click toolbar play button<br/><br/>
+<a class='eSeScreenshot' href="../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.24.00.979_PlayPause2_desktop.png" target="_blank"><img width='200' src='../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.24.00.979_PlayPause2_desktop.png' /></a><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [Play Video] but found []
+	at com.pearson.tests.SingleCaption.PlayPause(SingleCaption.java:73)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1962408005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1962408005'><pre>java.lang.AssertionError: expected [Play Video] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.pearson.tests.SingleCaption.PlayPause(SingleCaption.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>30</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.ReplayButton()'><b>ReplayButton</b><br>Test class: com.pearson.tests.SingleCaption<br/>
+<a href="#Output-761949296" onClick='toggleBox("Output-761949296", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-761949296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-761949296">
+<a class='eSeScreenshot' href="../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.26.15.440_ReplayButton2_desktop.png" target="_blank"><img width='200' src='../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.26.15.440_ReplayButton2_desktop.png' /></a><br/>
+</div>
+</td>
+<td><div><pre>com.pearson.test.eselenium.framework.exceptions.TimeOutException: Verification exception for element: Timed out: After 40077ms, failed while element initialization [Locator = {By.selector: button[id=&apos;playBtn&apos;][value=&apos;Pause Video&apos;]}]
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.waitToBePresent(DefaultUIElement.java:942)
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.waitToBePresent(DefaultUIElement.java:925)
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.getAttribute(DefaultUIElement.java:466)
+	at com.pearson.tests.SingleCaption.ReplayButton(SingleCaption.java:252)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace761949296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace761949296'><pre>com.pearson.test.eselenium.framework.exceptions.TimeOutException: Verification exception for element: Timed out: After 40077ms, failed while element initialization [Locator = {By.selector: button[id=&apos;playBtn&apos;][value=&apos;Pause Video&apos;]}]
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.waitToBePresent(DefaultUIElement.java:942)
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.waitToBePresent(DefaultUIElement.java:925)
+	at com.pearson.test.eselenium.framework.elements.DefaultUIElement.getAttribute(DefaultUIElement.java:466)
+	at com.pearson.tests.SingleCaption.ReplayButton(SingleCaption.java:252)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>134</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.ScreenMode()'><b>ScreenMode</b><br>Test class: com.pearson.tests.SingleCaption<br/>
+<a href="#Output-911311167" onClick='toggleBox("Output-911311167", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-911311167" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-911311167">
+<a class='eSeScreenshot' href="../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.26.40.829_ScreenMode2_desktop.png" target="_blank"><img width='200' src='../../../../artifact/target/failsafe-reports/screenShots/2014.09.18_at_17.26.40.829_ScreenMode2_desktop.png' /></a><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [Enter Full Screen] but found [null]
+	at com.pearson.tests.SingleCaption.ScreenMode(SingleCaption.java:153)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace911311167", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace911311167'><pre>java.lang.AssertionError: expected [Enter Full Screen] but found [null]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.pearson.tests.SingleCaption.ScreenMode(SingleCaption.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>25</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.CaptionPresence()'><b>CaptionPresence</b><br>Test class: com.pearson.tests.SingleCaption</td>
+<td></td>
+<td>35</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.DragVolume()'><b>DragVolume</b><br>Test class: com.pearson.tests.SingleCaption</td>
+<td></td>
+<td>27</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.HoverPlayButton()'><b>HoverPlayButton</b><br>Test class: com.pearson.tests.SingleCaption</td>
+<td></td>
+<td>40</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.MoreInfoButton()'><b>MoreInfoButton</b><br>Test class: com.pearson.tests.SingleCaption</td>
+<td></td>
+<td>25</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.TitleVerification()'><b>TitleVerification</b><br>Test class: com.pearson.tests.SingleCaption</td>
+<td></td>
+<td>24</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+<tr>
+<td title='com.pearson.tests.SingleCaption.VolumeController()'><b>VolumeController</b><br>Test class: com.pearson.tests.SingleCaption</td>
+<td></td>
+<td>25</td>
+<td>com.pearson.tests.SingleCaption@6d6ae297</td></tr>
+</table><p>
+</body>
+</html>

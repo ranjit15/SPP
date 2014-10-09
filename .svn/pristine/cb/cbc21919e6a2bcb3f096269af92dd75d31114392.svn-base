@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.pearson.tests.TwoCaption">
+        <methods>
+          <include name="afterTest"/>
+          <include name="setupClassTest"/>
+          <include name="logMethod"/>
+          <include name="afterMethod"/>
+          <include name="cleanupDrivers"/>
+          <include name="logTest"/>
+          <include name="afterSuite"/>
+          <include name="TitleVerification"/>
+          <include name="afterClassTest"/>
+        </methods>
+      </class> <!-- com.pearson.tests.TwoCaption -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

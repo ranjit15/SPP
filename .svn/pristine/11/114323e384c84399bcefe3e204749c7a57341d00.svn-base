@@ -1,0 +1,112 @@
+<!DOCTYPE Suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BrowserPOC_Tests">
+<!-- only exclude does anything for the groups -->
+    <!-- Reference -->
+    <!-- <test name="Demo Test"> <parameter name="url" value="src/test/resources/testData/login.html"></parameter> 
+        <groups> <run> <exclude name="errorDetector"></exclude> </run> </groups> 
+        <classes> <class name="com.pearson.demotests.DemoTestIT" /> </classes> </test> -->
+    <!-- Testng was created by someone with the coding abilities of a 12 year old. 
+    Follow this format or have fun slowly going insane. 
+    One test for every class-->
+    <test name="Play State Test">
+        <groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PlayState" />    
+        </classes>
+    </test>
+    <test name="Paused State Test">
+        <groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PausedState" />    
+        </classes>
+    </test>
+    <test name="Chaptering Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Chaptering" />    
+        </classes>
+    </test>
+    <test name="ElementsVerification">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.ElementsVerification" />    
+        </classes>
+    </test>
+    <test name="Pre Play State Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.PrePlayState" />    
+        </classes>
+    </test>
+        <test name="Simplified Concept Check IT">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.SimplifiedConceptCheckIT" />    
+        </classes>
+    </test>
+<!-- Accessibility Tests -->
+    <test name="Escape Normal Screen Size Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility.Test_Escape_NormalScreenSize" />    
+        </classes>
+    </test>
+    <test name="Test_TabEnter Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility.Test_TabEnter" />    
+        </classes>
+    </test>
+    <test name="TestPlayPause_PKey Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility.TestPlayPause_PKey" />    
+        </classes>
+    </test>
+    <test name="TestVolume_onVideoMutes Test">
+    	<groups>
+            <run>
+	            <include name="regression"></include>             
+            </run>
+        </groups>
+        <classes>
+            <class name="com.pearson.tests.Accessibility.TestVolume_onVideoMutes" />    
+        </classes>
+    </test>
+</suite>
