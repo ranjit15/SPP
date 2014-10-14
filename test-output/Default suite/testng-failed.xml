@@ -6,17 +6,13 @@
       <class name="com.pearson.tests.ChapterTest">
         <methods>
           <include name="afterTest"/>
-          <include name="ChapterSeekingCorrectly"/>
-          <include name="ReplayButton"/>
           <include name="setupClassTest"/>
-          <include name="VolumeController"/>
           <include name="logMethod"/>
           <include name="afterMethod"/>
-          <include name="ChapterMarker"/>
           <include name="cleanupDrivers"/>
           <include name="logTest"/>
           <include name="afterSuite"/>
-          <include name="PlayPause"/>
+          <include name="TitleVerification"/>
           <include name="afterClassTest"/>
         </methods>
       </class> <!-- com.pearson.tests.ChapterTest -->

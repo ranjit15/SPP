@@ -40,7 +40,7 @@ public class ChapterTest extends MediaPlayerTest
 	 /*
      * Verify the video title of Internal Concept Check video
      */
-    //@Test(groups = {"TitleVerification", "regression"})
+    @Test(groups = {"TitleVerification", "regression"})
     public void TitleVerification() throws AWTException {
         uiDriver.get("http://mediaplayer.pearsoncmg.com/assets/8B6DEF0F-6F9C-5CBF-C402-AE349B071BDC");
         GenericVideoPage genericVideoPage = new GenericVideoPage(uiDriver);

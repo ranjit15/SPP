@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [BrowserPOC_Tests]">
-  <test name="Single Caption(failed)">
+  <test name="ChapterTest(failed)">
     <groups>
       <run>
-        <include name="regression"/>
+        <include name="TitleVerification"/>
+        <exclude name="PlayPause"/>
+        <exclude name="DragVideoScrubber"/>
       </run>
     </groups>
     <classes>
-      <class name="com.pearson.tests.SingleCaption">
+      <class name="com.pearson.tests.ChapterTest">
         <methods>
           <include name="afterTest"/>
-          <include name="ScreenMode"/>
-          <include name="DragVideoScrubber"/>
           <include name="setupClassTest"/>
-          <include name="ReplayButton"/>
-          <include name="logMethod"/>
           <include name="afterMethod"/>
           <include name="cleanupDrivers"/>
-          <include name="CaptionValidation"/>
           <include name="logTest"/>
           <include name="afterSuite"/>
-          <include name="PlayPause"/>
+          <include name="TitleVerification"/>
           <include name="afterClassTest"/>
         </methods>
-      </class> <!-- com.pearson.tests.SingleCaption -->
+      </class> <!-- com.pearson.tests.ChapterTest -->
     </classes>
-  </test> <!-- Single Caption(failed) -->
+  </test> <!-- ChapterTest(failed) -->
 </suite> <!-- Failed suite [BrowserPOC_Tests] -->
